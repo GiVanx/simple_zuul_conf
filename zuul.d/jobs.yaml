@@ -15,3 +15,10 @@
     name: install_maven
     parent: base
     run: playbooks/install_maven.yaml
+
+- job:
+    name: run_project
+    parent: base
+    run: 
+       - playbooks/install_maven.yaml
+       - playbooks/run_project.yaml
