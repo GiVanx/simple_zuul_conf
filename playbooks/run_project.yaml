@@ -1,4 +1,6 @@
 - hosts: all
   tasks: 
     - name: Run project
-      shell: mvn package
+      shell: | 
+        cd {{zuul.project.src_dir}}/
+        mvn package
