@@ -1,4 +1,12 @@
 - project:
+    name: ^.*$
+    check:
+      jobs: []
+    gate:
+      jobs: []
+
+
+- project:
     check:
       jobs:
         - noop
