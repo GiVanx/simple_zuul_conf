@@ -1,0 +1,9 @@
+- job:
+    name: maven_build
+    parent: base
+    run: playbooks/maven_build.yaml
+    
+- job:
+    name: install_maven
+    parent: base
+    run: playbooks/install_maven.yaml

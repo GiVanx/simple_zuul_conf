@@ -1,0 +1,9 @@
+- hosts: all
+  vars:
+    pom_relative_path: ""
+    additional_mvn_test_args: ""
+  tasks:
+    - name: Build project
+      shell: |
+         cd {{zuul.project.src_dir}}/{{pom_relative_path}}
+         mvn test {{additional_mvn_test_args}}
