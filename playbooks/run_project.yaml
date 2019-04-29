@@ -2,5 +2,6 @@
   tasks: 
     - name: Run project
       shell: | 
-        cd {{zuul.project.src_dir}}/
+        echo "Current dir: {{zuul.project.src_dir}}"
+        cd {{zuul.project.src_dir}}
         mvn package
